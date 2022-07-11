@@ -10,5 +10,5 @@
   2. Link on-board unit with user.
   3. Control on-board unit.
  
-## preview:
+## Preview:
 
