@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:obu_connector/shared/constants.dart';
 
 class AuthRepo {
-  static const mainEndPoint = '192.168.1.4';
-
   Future<String> loginWithNameAndPassword(String name, String password) async {
     late String state;
     var url = Uri.parse('http://$mainEndPoint/log_in.php');

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const mainEndPoint = '192.168.1.2';
+
 void showASnackBar(
   context,
   String msg, {
