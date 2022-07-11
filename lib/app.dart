@@ -5,7 +5,6 @@ import 'package:obu_connector/auth/login/login.dart';
 import 'package:obu_connector/home/home.dart';
 import 'package:obu_connector/logic/bloc/auth_bloc.dart';
 import 'package:obu_connector/services/auth.dart';
-import 'package:obu_connector/shared/constants.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
