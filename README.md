@@ -1,16 +1,14 @@
 # obu_connector
 
-A new Flutter project.
+## Introduction:
 
-## Getting Started
+  This app is was created for a purpose of connecting and controlling the on-board unit (OBU). Through this app you will be able to control algorithms (turn on or off).
+  
+## Features:
 
-This project is a starting point for a Flutter application.
+  1. Authenticate using user date (username or email and password).
+  2. Link on-board unit with user.
+  3. Control on-board unit.
+ 
+## Preview:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
