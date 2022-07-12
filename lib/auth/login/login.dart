@@ -248,28 +248,28 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 30,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Don\'t have an account?',
-                    style: TextStyle(
-                        color: Colors.grey.shade600,
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w400),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Register',
-                      style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  )
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Text(
+              //       'Don\'t have an account?',
+              //       style: TextStyle(
+              //           color: Colors.grey.shade600,
+              //           fontSize: 14.0,
+              //           fontWeight: FontWeight.w400),
+              //     ),
+              //     TextButton(
+              //       onPressed: () {},
+              //       child: const Text(
+              //         'Register',
+              //         style: TextStyle(
+              //             color: Colors.blue,
+              //             fontSize: 14.0,
+              //             fontWeight: FontWeight.w400),
+              //       ),
+              //     )
+              //   ],
+              // ),
             ],
           ),
         ),

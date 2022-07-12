@@ -4,6 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:obu_connector/auth/login/login.dart';
 import 'package:obu_connector/home/home.dart';
 import 'package:obu_connector/logic/bloc/auth_bloc.dart';
+import 'package:obu_connector/logic/cubit/mqtt_cubit.dart';
 import 'package:obu_connector/services/auth.dart';
 
 class MyApp extends StatelessWidget {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       BlocProvider(
           create: (_) =>
               AuthBloc(box: userBox, authRepo: _authRepo)..add(AuthStatus())),
+      BlocProvider(create: (_) => MqttCubit()),
     ], child: const AppView());
   }
 }

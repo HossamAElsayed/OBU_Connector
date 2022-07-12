@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:obu_connector/device/device_manager.dart';
 import 'package:obu_connector/logic/bloc/auth_bloc.dart';
+import 'package:obu_connector/logic/cubit/mqtt_cubit.dart';
 import 'package:obu_connector/router/router.dart';
 import 'package:obu_connector/shared/constants.dart';
 import 'components/select_device.dart';
@@ -34,7 +36,7 @@ class HomePageBody extends StatefulWidget {
 class _HomePageBodyState extends State<HomePageBody>
     with SingleTickerProviderStateMixin {
   late AnimationController loadingController;
-  bool isLinked = false;
+  bool isLinked = true;
   bool isSearching = false;
 
   @override
@@ -192,7 +194,14 @@ class _HomePageBodyState extends State<HomePageBody>
                               Flexible(
                                 flex: 3,
                                 child: GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    BlocProvider.of<MqttCubit>(context)
+                                        .connectToServer();
+                                    Navigator.pushNamed(
+                                        context, '/DeviceManagerScreen',
+                                        arguments: const DeviceManagerScreen(
+                                            name: 'Device 1'));
+                                  },
                                   child: Container(
                                     height: 40,
                                     decoration: BoxDecoration(
@@ -201,7 +210,7 @@ class _HomePageBodyState extends State<HomePageBody>
                                             BorderRadius.circular(15.0)),
                                     child: const Center(
                                         child: Text(
-                                      'View Live Feed',
+                                      'View Options',
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 17),
                                     )),
