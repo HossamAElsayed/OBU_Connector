@@ -28,3 +28,7 @@
 | Connected Sucessfully  | Home screen showing connected devices |
 | ------------- | ------------- |
 |![Screenshot_20220711-165335](https://user-images.githubusercontent.com/33600370/178294631-ab8a0ed2-314c-4b85-b7bf-ce26474ea6ec.jpg)|![Screenshot_20220711-165530](https://user-images.githubusercontent.com/33600370/178294642-e675629e-645b-4f59-9328-be8c83480fd3.jpg)|
+
+| Controlling Screen |
+| ------------- |
+|![Screenshot_20220712-180917](https://user-images.githubusercontent.com/33600370/178541792-5c0b3772-0cc3-4f8b-bdc9-62874570597f.jpg)|
