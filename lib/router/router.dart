@@ -17,6 +17,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => DeviceManagerScreen(name: args.name),
         );
+
       // case '/DeviceManagerScreen':
       //   return MaterialPageRoute(
       //     builder: (_) => DeviceManagerScreen(),

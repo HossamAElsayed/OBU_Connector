@@ -11,7 +11,7 @@ import 'package:mqtt_client/mqtt_server_client.dart';
 part 'mqtt_state.dart';
 
 class MqttCubit extends Cubit<MqttState> {
-  MqttCubit() : super(const MqttState(false, false, false)) {
+  MqttCubit() : super(const MqttState(false, false, false, false)) {
     _client.logging(on: false);
     _client.setProtocolV311();
     _client.keepAlivePeriod = 20;
@@ -93,6 +93,19 @@ class MqttCubit extends Cubit<MqttState> {
     }
   }
 
+  void sendOpenLFHost() {
+    final builder = MqttClientPayloadBuilder();
+
+    if (state.isConnectedwithServer) {
+      print("Sending >> Start Live Feed Host");
+      builder.addString('OpenLiveFeedHost'); // message to be sent
+      _client.subscribe(_topic, MqttQos.exactlyOnce);
+
+      /// Publish it
+      _client.publishMessage(_topic, MqttQos.exactlyOnce, builder.payload!);
+    }
+  }
+
   void haltOBU() {
     final builder = MqttClientPayloadBuilder();
 
@@ -128,6 +141,10 @@ class MqttCubit extends Cubit<MqttState> {
         emit(state.copyWith(isDetectionRunning: !state.isDetectionRunning));
       } else if (pt == 'HaltingIn3Sec') {
         emit(state.copyWith(machineState: true));
+      } else if (pt == 'HostisLive') {
+        emit(state.copyWith(isLiveFeedHostRunning: true));
+      } else if (pt == 'UnableToOpenLiveFeedHost') {
+        emit(state.copyWith(isLiveFeedHostRunning: false));
       }
     });
   }
